@@ -69,6 +69,14 @@ public class AttachmentUtilImpl {
         ConnectBean connect = getServerConnectionProperties();
         
         try {
+            // ADD THESE LOGS to see what values are being used
+            LOG.info("=== SFTP Connection Attempt ===");
+            LOG.info("Hostname: {}", connect.getIpAddress());
+            LOG.info("Username: {}", connect.getUserName());
+            LOG.info("Port: {}", connect.getPort());
+            LOG.info("===============================");
+
+            
             JSch jsch = new JSch();
             session = jsch.getSession(connect.getUserName(), connect.getIpAddress(), connect.getPort());
             
