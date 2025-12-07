@@ -16,7 +16,7 @@
     <artifactId>IFlowHelper_attachment</artifactId>
     <version>24.09.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>IFlowHelper_attachment</name>
+    <n>IFlowHelper_attachment</n>
     
     <url>http://maven.apache.org</url>
     
@@ -34,10 +34,8 @@
         <spring.version>4.3.5.RELEASE</spring.version>
     </properties>
     
-    <!-- REMOVED dependencyManagement section -->
-    
     <dependencies>
-        <!-- Spring Boot Starters with explicit versions from dependency tree -->
+        <!-- Spring Boot Starters -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -68,14 +66,14 @@
             <version>${spring.boot.version}</version>
         </dependency>
         
-        <!-- Jackson with version from dependency tree -->
+        <!-- Jackson -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
             <version>2.8.5</version>
         </dependency>
         
-        <!-- Socgen API Bank dependencies -->
+        <!-- Socgen API Bank - EXCLUDE ALL SPRING BOOT -->
         <dependency>
             <groupId>com.socgen.apibank</groupId>
             <artifactId>security</artifactId>
@@ -83,19 +81,30 @@
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-autoconfigure</artifactId>
+                    <artifactId>*</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot</artifactId>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
         
+        <!-- Swagger Starter - EXCLUDE ALL SPRING BOOT -->
         <dependency>
             <groupId>com.socgen.apibank</groupId>
             <artifactId>swagger-starter</artifactId>
             <version>2.1.9</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         
         <!-- HSQLDB -->
@@ -106,7 +115,7 @@
             <scope>runtime</scope>
         </dependency>
         
-        <!-- Commons libraries - versions from dependency tree -->
+        <!-- Commons libraries -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -131,7 +140,7 @@
             <version>1.4</version>
         </dependency>
         
-        <!-- Apache POI - versions from dependency tree -->
+        <!-- Apache POI -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
