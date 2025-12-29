@@ -1,0 +1,55 @@
+swagger:
+  enabled: true
+  title: Risk-Web services
+  description: Various web services were created to eliminate the manual and redundan
+  version: 1.0.0
+  termofServiceUrl: API terms of services URL
+  contactName: Mallika Reddy
+  contactUrl: https://sbc.safe.socgen/people/mallika.reddy
+  contactEmail: GSC-ITEC-FRM-CCR-RISKWEB@socgen.com
+  License: (c) SGCIB. All Rights Reserved
+  LicenseUrl: http://sgithub.fr.world.socgen/DTL/apibank-java-showcase/LICENSE.md
+  
+  security:
+    enabled: true
+    
+    # Add Basic Authentication
+    basic-auth:
+      enabled: true
+      name: basicAuth
+      description: Basic Authentication (Username and Password)
+    
+    # Keep your existing OAuth2 configuration
+    implicit-flow:
+      authorizeEndpointUrl: https://sgconnect-hom.fr.world.socgen/openam/oauth2/authoriz
+      clientId: 2fcd8bf9-7ea1-4316-a21a-e106167e3fff
+      globalScopes:
+        - name: openid
+          description: Default scope
+        - name: api.getcreditcheckdetails.v1
+          description: Scope for Analyst API
+        - name: api.getdetail.v1
+          description: Scope for Analyst API
+        - name: api.createiflow.v1
+          description: Scope for Analyst API
+        - name: api.getdealid.v1
+          description: Scope for Input Deal Reference API
+        - name: api.getprincingdetails.v1
+          description: Scope for Pricing Details API
+        - name: api.assignanalyst.v1
+          description: Scope for Analyst API
+
+
+
+
+# dependencies check in pom.xml file 
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.9.2</version>
+</dependency>
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>2.9.2</version>
+</dependency>
