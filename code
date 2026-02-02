@@ -1,0 +1,13 @@
+Workflow to evaluate risk profiles of exotic deals that cannot be computed by PDC. Deals characteristics are entered by front officer and risk profiles are computed by RISK.
+
+▸ Then, a credit check is generated and sent to Front Officer in order to authorize deals or not.
+
+Note that iFlow will not block Front Officers in their operations. It will give a Green or Red light only and reports are sent to RXC to match deals with simulations.
+
+▸ Deals can be sent to iPilotage to create a trader's approval if needed.
+
+IFORCE
+
+▸ iForce is dedicated to Front Officers and RISQ people in order to follow-up available, overshoot, exposure and limits. This function is identical to the one of iPilotage but úsers are not the same.
+
+▸ iForce also gives the possibility to set alarms on the indicators above and extract them to excel.
