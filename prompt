@@ -1,0 +1,6 @@
+With your current changes The authorise button came but there is issue . With earlier code before JDK migration I was able to authorise by implicit way means through SGconnect API passing only client id . But now after JDK migration, it gives error 
+auth errorf"error_description":"Response type is not
+
+supported.","state":"TW9ulEFwciAwNiAyMDI2IDlyOjMyOjM4IEdNVCswNTMwIChJbmRpYSBTdGFuZGFyZCB UaW1IKQ==","error"."unsupported_response_type"}
+And also one more thing you kept a fallback mechanism like if the implicit way of authentication is not working then you gave me the authentication code and there I have to pass client id and secret id but I want only the implicit way of authentication by passing only client id so don't write the authentication code here. 
+Please review your changes and help
