@@ -1,0 +1,8 @@
+I am working on a GetCreditCheckDetails API.
+
+when I pass username in the req body and got the correct response with my earlier  code . but  Now with your changes  (current code )the seasameid is properly authenticated  without passing through the req body (as expected ) which is correct but I got empty response with 500 internal server error which is not correct so please do something. You should not change any other function abilities.
+
+Please review the recent changes
+
+Identify where the 500 error is being triggered.
+Ensure that all original functionabilities and data requirements for the GetCreditCheckDetails service are preserved.
